@@ -7,10 +7,10 @@ terraform {
   }
  
   backend "azurerm" {
-	resource_group_name = "tf_provisioning"
+    resource_group_name = "tf_provisioning"
     storage_account_name = "tfcmigrationpoc"
-	container_name       = "tfc-migration-poc"
-	key                  = "sv-5eMnhUPSsFnCCTc7.tfstate"
+    container_name = "tfc-migration-poc"
+    key = "sv-5eMnhUPSsFnCCTc7.tfstate"
   }
 }
 
