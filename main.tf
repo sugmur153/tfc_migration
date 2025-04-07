@@ -1,17 +1,17 @@
 terraform {
   required_providers {
-    local = {
-      source  = "hashicorp/local"
-      version = "~> 2.0"
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "3.8.0"
     }
   }
  
   backend "azurerm" {
-    resource_group_name = "tf_provisioning"
-    storage_account_name = "tfcmigrationpoc"
-    container_name = "tfc-migration-poc"
-    key = "sv-5eMnhUPSsFnCCTc7.tfstate"
-    access_key = "eZ4q3sC8ofwNZRil5PNnkDGvFHepniJZsX51+a1PfgsESkuH4BvQ1usR1ZJKm8iaiqryVam2fX2v+AStPgfFFw=="
+    subscription_id = "e468360d-1119-4dd6-8b2a-77b89b428561"
+    tenant_id = "7cacbdfd-ebad-46c0-8d1e-b7058ce44173"
+    client_id = "21e07847-25e9-486d-b37e-e4635ae89325"
+    client_secret = "WsP8Q~C-WTBxy4ubzteGIW3yTXU9u_qn7_ncrb5N"
+    features {}
   }
 }
 
