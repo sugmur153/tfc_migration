@@ -11,6 +11,7 @@ terraform {
     storage_account_name = "tfcmigrationpoc"
     container_name = "tfc-migration-poc"
     key = "sv-5eMnhUPSsFnCCTc7.tfstate"
+    access_key = "eZ4q3sC8ofwNZRil5PNnkDGvFHepniJZsX51+a1PfgsESkuH4BvQ1usR1ZJKm8iaiqryVam2fX2v+AStPgfFFw=="
   }
 }
 
