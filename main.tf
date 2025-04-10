@@ -18,8 +18,6 @@ terraform {
 provider "azurerm" {
   subscription_id = "e468360d-1119-4dd6-8b2a-77b89b428561"
   tenant_id       = "7cacbdfd-ebad-46c0-8d1e-b7058ce44173"
-  client_id       = "13527c96-5761-42db-b9b0-6c52a115ed94"
-  client_secret   = "n3m8Q~Rx0QdIPa1JkhTrpgyiD-hqocGBk.oRQcF."
   features {}
 }
 
@@ -47,8 +45,4 @@ resource "azurerm_storage_account" "example" {
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
- 
-  tags = {
-    environment = "dev"
-  }
 }
