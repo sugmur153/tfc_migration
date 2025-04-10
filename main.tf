@@ -35,12 +35,12 @@ variable "var4" {}
 #}
 
 resource "azurerm_resource_group" "example" {
-  name     = "tfe_np_ws_poc"
+  name     = "tfe_np_ws_poc1"
   location = "westus"
 }
  
 resource "azurerm_storage_account" "example" {
-  name                     = "tfenpstatefilepoc"
+  name                     = "tfenpstatefilepoc1"
   resource_group_name = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
