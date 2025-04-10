@@ -34,3 +34,4 @@ variable "var4" {}
 resource "local_file" "example" {
   content  = "Hello, Terraform! Var1: ${var.var1}, Var2: ${var.var2}, Var3: ${var.var3}, Var4: ${var.var4}"
   filename = "${path.module}/hello-${var.var3}.txt"
+}
