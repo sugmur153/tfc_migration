@@ -13,7 +13,7 @@ terraform {
   # key                  = "tfe_np_ws_poc1.tfstate"
     #access_key           = "4/kct+40HxKweY2VofS7Ha+Dzj6qEdlIBKtpRB9BPn4lmspsQIOpjTGEG5ww04S8LSUZ26OZfvzv+AStAzo1jA=="
   #}
-#}
+}
 
 provider "azurerm" {
   #subscription_id = "e468360d-1119-4dd6-8b2a-77b89b428561"
