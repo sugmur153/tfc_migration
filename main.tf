@@ -1,26 +1,14 @@
 terraform {
   required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "3.8.0"
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 4.0"
     }
-  }
-
-  backend "azurerm" {
-    resource_group_name = "tf_provisioning"
-    storage_account_name = "tfcmigrationpoc"
-    container_name       = "tfc-migration-poc"
-    key                  = "test1.tfstate"
-    access_key           = "4/kct+40HxKweY2VofS7Ha+Dzj6qEdlIBKtpRB9BPn4lmspsQIOpjTGEG5ww04S8LSUZ26OZfvzv+AStAzo1jA=="
   }
 }
 
-provider "azurerm" {
-  subscription_id = "e468360d-1119-4dd6-8b2a-77b89b428561"
-  tenant_id       = "7cacbdfd-ebad-46c0-8d1e-b7058ce44173"
-  client_id       = "21e07847-25e9-486d-b37e-e4635ae89325"
-  client_secret   = "WsP8Q~C-WTBxy4ubzteGIW3yTXU9u_qn7_ncrb5N"
-  features {}
+provider "aws" {
+  region = "us-west-2"
 }
 
 # Declare the variables
@@ -28,7 +16,6 @@ variable "var1" {}
 variable "var2" {}
 variable "var3" {}
 variable "var4" {}
-
 
 # Use the variables in the local file resource
 resource "local_file" "example" {
