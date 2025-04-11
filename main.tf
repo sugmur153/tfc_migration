@@ -48,9 +48,9 @@ resource "azurerm_storage_account" "example" {
   allow_blob_public_access = false
 }
 
-  network_rules {
-    default_action             = "Deny"     
-    bypass                     = ["AzureServices"]
-    ip_rules                   = ["104.42.219.139/32"]
-    virtual_network_subnet_ids = []
-}
+  #network_rules {
+  # default_action             = "Deny"     
+  #  bypass                     = ["AzureServices"]
+  # ip_rules                   = ["104.42.219.139/32"]
+  #  virtual_network_subnet_ids = []
+#}
