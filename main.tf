@@ -8,17 +8,29 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = var.aws_region
 }
 
-# Declare the variables
-variable "var1" {}
-variable "var2" {}
-variable "var3" {}
-variable "var4" {}
+# Variables
+variable "aws_region" {
+  default = "us-west-2"
+}
 
-# Use the variables in the local file resource
-resource "local_file" "example" {
-  content  = "Hello, Terraform! Var1: ${var.var1}, Var2: ${var.var2}, Var3: ${var.var3}, Var4: ${var.var4}"
-  filename = "${path.module}/hello-${var.var3}.txt"
+variable "instance_type" {
+  default = "t2.micro"
+}
+
+variable "ami_id" {
+  description = "AMI ID for the EC2 instance"
+  default     = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 (us-west-2)
+}
+
+# Resource: AWS EC2 Instance
+resource "aws_instance" "example" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+
+  tags = {
+    Name = "TFC-POC-Instance"
+  }
 }
