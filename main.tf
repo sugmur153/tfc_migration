@@ -19,6 +19,10 @@ provider "azurerm" {
   #subscription_id = "e468360d-1119-4dd6-8b2a-77b89b428561"
   #tenant_id       = "7cacbdfd-ebad-46c0-8d1e-b7058ce44173"
   features {}
+  client_id       = var.client_id
+  client_secret   = var.client_secret
+  tenant_id       = var.tenant_id
+  subscription_id = var.subscription_id
 }
 
 # Declare the variables
@@ -26,6 +30,10 @@ variable "var1" {}
 variable "var2" {}
 variable "var3" {}
 variable "var4" {}
+variable "client_id" {}
+variable "client_secret" {}
+variable "tenant_id" {}
+variable "subscription_id" {}
 
 
 # Use the variables in the local file resource
